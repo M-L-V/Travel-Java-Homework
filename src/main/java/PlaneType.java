@@ -12,5 +12,11 @@ public enum PlaneType {
         this.reservedWeight = reservedWeight;
     }
 
+    public int getCapacity(){
+        return this.capacity;
+    }
 
+    public int getReservedWeight(){
+        return this.reservedWeight;
+    }
 }
