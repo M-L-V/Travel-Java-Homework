@@ -1,19 +1,19 @@
 public enum PlaneType {
 
-    GHOPPER(4, 100),
+    GHOPPER( 4, 100),
     BLETCHLEY(2, 60);
 
 
-    private final int capacity;
+    private final int seats;
     private final int reservedWeight;
 
-    private PlaneType(int capacity, int reservedWeight){
-        this.capacity = capacity;
+    private PlaneType(int seats, int reservedWeight){
+        this.seats = seats;
         this.reservedWeight = reservedWeight;
     }
 
     public int getCapacity(){
-        return this.capacity;
+        return this.seats;
     }
 
     public int getReservedWeight(){

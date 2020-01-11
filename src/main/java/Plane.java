@@ -10,4 +10,11 @@ public class Plane {
         return this.planeType;
     }
 
+    public int getSeats(){
+        return this.planeType.getCapacity();
+    }
+
+    public int getWeight(){
+        return this.planeType.getReservedWeight();
+    }
 }
