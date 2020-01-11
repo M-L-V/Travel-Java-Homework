@@ -6,7 +6,8 @@ public class Plane {
         this.planeType = planeType;
     }
 
-    public Object getPlaneType(){
+
+    public PlaneType getPlaneType(){
         return this.planeType;
     }
 
