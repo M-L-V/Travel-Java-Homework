@@ -8,8 +8,9 @@ public class Flight {
     private String destination;
     private String airport;
     private String departureTime;
+    private Passenger passenger;
 
-    public Flight (ArrayList<Passenger> passengers, Plane plane, String flightNumber, String destination, String airport, String departureTime) {
+    public Flight(ArrayList<Passenger> passengers, Plane plane, String flightNumber, String destination, String airport, String departureTime) {
 
         this.passengers = new ArrayList<Passenger>();
         this.plane = plane;
@@ -28,11 +29,17 @@ public class Flight {
         return this.plane.getSeats();
     }
 
-    public int numOfPassengers(){
+    public int numOfPassengers() {
         return passengers.size();
     }
 
-    public void bookPassenger(Passenger passenger) {
-        passengers.add(passenger);
+    public ArrayList<Passenger> bookPassenger(Passenger passenger) {
+        int freeSeats = this.plane.getSeats();
+        if (passengers.size() < freeSeats)
+            {passengers.add(passenger);}
+        return passengers;
     }
+
+
 }
+

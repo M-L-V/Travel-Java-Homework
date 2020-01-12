@@ -1,6 +1,6 @@
 public enum PlaneType {
 
-    GHOPPER( 4, 100),
+    GHOPPER( 2, 100),
     BLETCHLEY(2, 60);
 
 
