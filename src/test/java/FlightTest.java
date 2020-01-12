@@ -62,6 +62,14 @@ public class FlightTest {
         flight.bookPassenger(passenger4);
         flight.bookPassenger(passenger5);
         assertEquals(2, flight.numOfPassengers());
+        assertEquals(0, flight.availableSeats());
     }
 
+    @Test
+    public void flightHasSeatsLeft(){
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger4);
+        assertEquals(0, flight.availableSeats());
+        assertEquals(2, flight.numOfPassengers());
+    }
 }

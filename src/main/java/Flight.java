@@ -41,5 +41,8 @@ public class Flight {
     }
 
 
+    public int availableSeats() {
+        return this.plane.getSeats() - this.passengers.size();
+    }
 }
 
