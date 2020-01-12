@@ -46,12 +46,15 @@ public class FlightTest {
     @Test
     public void flightStartsWithNoPassengers(){
         assertEquals(0, flight.numOfPassengers());
+        assertEquals(2, flight.availableSeats());
     }
 
     @Test
     public void flightCanBookPassengers(){
         flight.bookPassenger(passenger1);
-        assertEquals(1, flight.numOfPassengers());
+        flight.bookPassenger(passenger4);
+        assertEquals(2, flight.numOfPassengers());
+        assertEquals(0, flight.availableSeats());
     }
 
     @Test
@@ -65,11 +68,5 @@ public class FlightTest {
         assertEquals(0, flight.availableSeats());
     }
 
-    @Test
-    public void flightHasSeatsLeft(){
-        flight.bookPassenger(passenger1);
-        flight.bookPassenger(passenger4);
-        assertEquals(0, flight.availableSeats());
-        assertEquals(2, flight.numOfPassengers());
-    }
+
 }
